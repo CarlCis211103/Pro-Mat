@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="icon" type="image/png" href="assets/logo.png">
+<meta name="description" content="PRO-MAT: alimentos congelados al mayoreo en Matamoros. Hamburguesas, boneless, nuggets, burritos y tortillas de harina.">
+<meta property="og:title" content="PRO-MAT · Alimentos congelados al mayoreo">
+<meta property="og:description" content="Arma tu pedido y envíalo por WhatsApp.">
+<title>PRO-MAT · Alimentos congelados al mayoreo</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;800;900&display=swap">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<header>
+  <img class="logo" src="assets/logo.png" alt="Logotipo PRO-MAT">
+  <span class="brand">PRO-MAT</span>
+  <button class="cartbtn" id="open" aria-label="Abrir pedido">Mi pedido <b id="count">0</b></button>
+</header>
+
+<section class="hero">
+  <div>
+    <h1>Congelados al mayoreo para tu negocio.</h1>
+    <p>Hamburguesas, boneless, nuggets, burritos y tortillas de harina. Arma tu pedido aquí y lo confirmamos por WhatsApp.</p>
+    <a class="btn" href="#catalogo">Ver catálogo</a><a class="btn alt" href="#como">Cómo pedir</a>
+    <ul class="perks"><li>Venta a restaurantes y negocios</li><li>Entrega y seguimiento por WhatsApp</li></ul>
+  </div>
+  <svg class="ring" viewBox="0 0 200 200" role="img" aria-label="Cuchara verde y tenedor amarillo formando un círculo">
+    <path d="M100 18A82 82 0 0 1 182 100" fill="none" stroke="#F6C500" stroke-width="18" stroke-linecap="round"/>
+    <path d="M100 182A82 82 0 0 1 18 100" fill="none" stroke="#5FAE22" stroke-width="18" stroke-linecap="round"/>
+    <text x="100" y="108" text-anchor="middle" font-family="Archivo,Arial" font-weight="900" font-size="38" fill="currentColor">PRO-MAT</text>
+    <text x="100" y="128" text-anchor="middle" font-family="Archivo,Arial" font-weight="800" font-size="9" fill="currentColor">PROCESADOS DE MATAMOROS</text>
+  </svg>
+</section>
+
+<main>
+  <h2 id="catalogo">Catálogo</h2>
+  <p class="sub">Precios por unidad de venta, más IVA si aplica. Agrega lo que necesites y envía tu pedido.</p>
+  <div class="chips" id="chips" role="group" aria-label="Filtrar por categoría"></div>
+  <div class="grid" id="grid"></div>
+
+  <section class="how" id="como">
+    <div><h3>1. Elige</h3><p>Agrega al pedido las cajas y bolsas que necesitas.</p></div>
+    <div><h3>2. Revisa</h3><p>Abre “Mi pedido”, ajusta cantidades y escribe el nombre de tu negocio.</p></div>
+    <div><h3>3. Envía por WhatsApp</h3><p>Te llega el pedido completo y ahí confirmamos existencias, envío y pago.</p></div>
+  </section>
+</main>
+<footer>PRO-MAT · Procesados de Matamoros · Alimentos congelados al mayoreo</footer>
+
+<div class="scrim" id="scrim"></div>
+<aside id="cart" aria-label="Mi pedido" aria-hidden="true">
+  <div class="ah"><h2>Mi pedido</h2><button class="x" id="close" aria-label="Cerrar">×</button></div>
+  <div class="items" id="items"></div>
+  <div class="af">
+    <input id="biz" placeholder="Nombre de tu negocio" autocomplete="organization">
+    <textarea id="notes" rows="2" placeholder="Notas: dirección, día de entrega, dudas…"></textarea>
+    <div class="tot"><span>Total estimado</span><span id="total">$0</span></div>
+    <button class="send" id="send" disabled>Enviar pedido por WhatsApp</button>
+    <p class="note">El total es una referencia. Confirmamos precio final y existencias por WhatsApp.</p>
+  </div>
+</aside>
+
+<script src="js/app.js"></script>
+</body>
+</html>
